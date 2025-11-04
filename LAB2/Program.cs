@@ -10,10 +10,15 @@ foreach (var item in list)
 {
     Console.WriteLine(item);
 }
-Console.WriteLine("Добавляю в начало списка новый элемент:");
+Console.WriteLine("\nДобавляю в начало списка новый элемент:");
 list = list + 4;
+foreach (var item in list)
+{
+    Console.WriteLine(item);
+}
 
-Console.WriteLine("Второй список:");
+
+Console.WriteLine("\nВторой список:");
 MyList<int> list1 = new MyList<int>();
 list1.Add(4);
 list1.Add(5);
@@ -24,9 +29,8 @@ foreach (var item in list)
     Console.WriteLine(item);
 }
 
-Console.WriteLine("Удаляем первый элемент из второго списка");
+Console.WriteLine("\nУдаляем первый элемент из второго списка:");
 list--;
-Console.WriteLine();
 
 foreach (var item in list)
 {
@@ -34,16 +38,11 @@ foreach (var item in list)
 }
 
 Console.WriteLine();
-
-foreach (var item in list1)
-{
-    Console.WriteLine(item);
-}
-
-Console.WriteLine(list == list1 ? "списки равны" : "списки не равны");
+Console.WriteLine(list == list1 ? "первый и второй списки равны." : "первый и второй списки не равны.");
 
 Console.WriteLine();
 
+Console.WriteLine("Два списка соединенных вместе:");
 MyList<int> multList = new MyList<int>();
 multList = list * list1;
 
@@ -54,10 +53,15 @@ foreach (var item in multList)
 
 MyList<string> strList = new MyList<string>();
 strList.Add("Привет");
-strList.Add("gока");
-strList.Add("Здравствуйте РАПАПАМ РАПАПАМ");
+strList.Add("пока");
+strList.Add("Здравствуйте Сергей");
 strList.Add("hello");
 
-Console.WriteLine();
+Console.WriteLine("\nСтроковый список:");
+foreach (var item in strList)
+{
+    Console.WriteLine(item);
+}
+Console.WriteLine("\nКоличество заглавных букв в словах:");
 int count = MyListExtensions.CountWordsStartingWithUpper(strList);
 Console.WriteLine(count);
