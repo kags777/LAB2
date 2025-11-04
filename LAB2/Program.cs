@@ -1,13 +1,19 @@
 ﻿using LAB2;
 
-List<int> lisht = new List<int>();
 
 MyList<int> list = new MyList<int>();
 list.Add(1);
 list.Add(2);
 list.Add(3);
+Console.WriteLine("Первый список:");
+foreach (var item in list)
+{
+    Console.WriteLine(item);
+}
+Console.WriteLine("Добавляю в начало списка новый элемент:");
 list = list + 4;
 
+Console.WriteLine("Второй список:");
 MyList<int> list1 = new MyList<int>();
 list1.Add(4);
 list1.Add(5);
@@ -18,6 +24,7 @@ foreach (var item in list)
     Console.WriteLine(item);
 }
 
+Console.WriteLine("Удаляем первый элемент из второго списка");
 list--;
 Console.WriteLine();
 
