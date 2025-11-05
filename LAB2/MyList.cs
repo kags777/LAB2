@@ -15,7 +15,7 @@ namespace LAB2
         {
             objects = new List<T>();
         }
-        // индексатор
+        
         public T this[int index]
         {
             get => objects[index];

@@ -17,7 +17,6 @@ namespace LAB2
                 if (string.IsNullOrWhiteSpace(str))
                     continue;
 
-                // Разбиваем строку на слова
                 var words = str.Split(new char[] { ' ', '\t', '.', ',', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
 
                 // Считаем слова с заглавной буквы
@@ -29,6 +28,37 @@ namespace LAB2
             }
 
             return count;
+        }
+
+        public static void CountRepeatedWords(this MyList<string> list)
+        {
+            Dictionary<string, int> wordCount = new Dictionary<string, int>();
+
+            foreach (var str in list)
+            {
+                if (string.IsNullOrWhiteSpace(str))
+                    continue;
+
+                var words = str.Split(new char[] { ' ', '\t', '.', ',', '!', '?' },
+                    StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (var w in words)
+                {
+                    string word = w.ToLower(); 
+
+                    if (wordCount.ContainsKey(word))
+                        wordCount[word]++;
+                    else
+                        wordCount[word] = 1;
+                }
+            }
+
+            Console.WriteLine("\nПовторяющиеся слова:");
+            foreach (var pair in wordCount)
+            {
+                if (pair.Value > 1)
+                    Console.WriteLine($"{pair.Key} — {pair.Value} раз(а)");
+            }
         }
     }
 }

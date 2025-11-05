@@ -53,7 +53,7 @@ foreach (var item in multList)
 
 MyList<string> strList = new MyList<string>();
 strList.Add("Привет");
-strList.Add("пока");
+strList.Add("hello сергей Здравствуйте");
 strList.Add("Здравствуйте Сергей");
 strList.Add("hello");
 
@@ -65,3 +65,5 @@ foreach (var item in strList)
 Console.WriteLine("\nКоличество заглавных букв в словах:");
 int count = MyListExtensions.CountWordsStartingWithUpper(strList);
 Console.WriteLine(count);
+
+MyListExtensions.CountRepeatedWords(strList);
