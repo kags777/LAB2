@@ -26,7 +26,6 @@ namespace LAB2
                         count++;
                 }
             }
-
             return count;
         }
 
