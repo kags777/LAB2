@@ -120,7 +120,4 @@ foreach (var trial in trials)
 
     Console.WriteLine();
     Console.WriteLine("------------------------------------------------");
-}
-
-
-        
+}      
