@@ -59,7 +59,7 @@ namespace LAB2
 
     public sealed class FinalExam : Exam
     {
-        public string GraduationLevel { get; set; } // Школьный, университетский и т.п.
+        public string GraduationLevel { get; set; }
         public string Commission { get; set; }
         public override string ToString()
         {
@@ -70,14 +70,13 @@ namespace LAB2
             base.ShowInfo();
             Console.WriteLine($"GraduationLevel: {GraduationLevel}, Commission: {Commission}");
         }
-
     }
 
     public class Test : Trial
     {
         public string Subject { get; set; }
         public int QuestionCount { get; set; }
-        public int PassScore { get; set; } //Проходной балл
+        public int PassScore { get; set; } 
 
         public override string ToString()
         {
@@ -88,22 +87,21 @@ namespace LAB2
             base.ShowInfo();
             Console.WriteLine($"Subject: {Subject}, QuestionCount: {QuestionCount}, PassScore: {PassScore}");
         }
-
     }
 
     public class Question: Trial
     {
-        public string Text { get; set; } // Текст вопроса
-        public string Options { get; set; } // Варианты ответов (если тест)
-        public string CorrectAnswer { get; set; } // Правильный ответ
-        public int Points { get; set; }  // Баллы за вопрос
+        public string Text { get; set; } 
+        public string Options { get; set; } 
+        public string CorrectAnswer { get; set; } 
+        public int Points { get; set; }  
         public override string ToString()
         {
-            return $"Text: {Text}, Options: {Options},CorrectAnswer: {CorrectAnswer},Points: {Points}";
+            return $"Text: {Text}\nOptions:\n{Options} \nCorrectAnswer:{CorrectAnswer}\nPoints: {Points}";
         }
-        public void ShowInfo()
+        public override void ShowInfo()
         {
-            Console.WriteLine($"Text: {Text}, Options: {Options},CorrectAnswer: {CorrectAnswer},Points: {Points}");
+            Console.WriteLine($"Text: {Text}\nOptions:\n{Options} \nCorrectAnswer:{CorrectAnswer}\nPoints: {Points}");
         }
     }
 }

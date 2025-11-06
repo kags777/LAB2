@@ -1,6 +1,5 @@
 ﻿using LAB2;
 
-
 MyList<int> list = new MyList<int>();
 list.Add(1);
 list.Add(2);
@@ -16,7 +15,6 @@ foreach (var item in list)
 {
     Console.WriteLine(item);
 }
-
 
 Console.WriteLine("\nВторой список:");
 MyList<int> list1 = new MyList<int>();
@@ -68,7 +66,7 @@ Console.WriteLine(count);
 MyListExtensions.CountRepeatedWords(strList);
 
 Console.WriteLine("\n-------------------------------------------------------\n");
-Console.WriteLine("Работа с испытаниями:");
+Console.WriteLine("Работа с испытаниями:\n");
 
 Trial[] trials = new Trial[4];
 
@@ -107,14 +105,12 @@ trials[2] = new Test
 trials[3] = new Question
 {
     Text = "Что такое наследование в программировании?",
-    Options = "A) Механизм, позволяющий одному классу использовать свойства и методы другого класса. " +
-    "B) Процесс, при котором программа автоматически копирует весь код из одного проекта в другой. " +
+    Options = "A) Механизм, позволяющий одному классу использовать свойства и методы другого класса. \n" +
+    "B) Процесс, при котором программа автоматически копирует весь код из одного проекта в другой. \n" +
      "C) Способ организации данных в базе данных через таблицы и связи.",
     CorrectAnswer = "A",
     Points = 4
 };
-
-
 
 foreach (var trial in trials)
 {

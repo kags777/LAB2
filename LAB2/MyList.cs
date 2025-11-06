@@ -15,7 +15,6 @@ namespace LAB2
         {
             objects = new List<T>();
         }
-        
         public T this[int index]
         {
             get => objects[index];
@@ -94,7 +93,5 @@ namespace LAB2
         {
             return !(list == otherList);
         }
-
-
     }
 }
